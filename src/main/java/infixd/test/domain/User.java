@@ -8,16 +8,39 @@ import org.neo4j.ogm.annotation.NodeEntity;
 public class User {
 
 	@GraphId
+	private Long NodeId;
+	
 	private String name;
+	private String country;
 
 	public User() {
 
 	}
 
-	public User(String name) {
+	
+	public Long getNodeId() {
+		return NodeId;
+	}
+
+
+	public void setNodeId(Long nodeId) {
+		NodeId = nodeId;
+	}
+
+
+	public User(String name, String country) {
 
 		this.name = name;
+		this.country=country;
 
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public String getName() {
@@ -28,4 +51,6 @@ public class User {
 		this.name = name;
 	}
 
-}
+	
+	}
+
